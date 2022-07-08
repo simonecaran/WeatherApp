@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meteo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Meteo nella tua città</h1>
+      <div class="row justify-content-center">
+        <div class="col-3">
+          <div class="card border-0 glassBox" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="..." id="Icon">
+            <div class="card-body">
+              <p class="card-text" id="city"></p>
+              <p class="card-text" id="tempMax"></p>
+              <p class="card-text" id="tempMin"></p>
+              <p class="card-text" id="temp"></p>
+              <p class="card-text" id="weather"></p>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <form id="weatherSearch">
+            <div class="input-group mt-3">
+              <input id="cityInput" type="text" class="form-control" placeholder="Cerca una città" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <span class="input-group-text" id="button" style="cursor: pointer;">Cerca</span>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

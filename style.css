@@ -1,0 +1,16 @@
+body{
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)), url("img/img-1.jpg") no-repeat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: grey;
+}
+
+.glassBox{
+    background-color: rgb(190,187,179,0.2);
+    border-radius: 30px;
+    border-top: solid white 2px;
+    border-right: solid white 2px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    filter: drop-shadow(-30px -30px 20px black);
+    color: black;
+}
