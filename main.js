@@ -52,6 +52,15 @@ btn.addEventListener('click',()=>{
     fetch(completeWeatherUrl)
     .then(response => response.json())
     .then(data => {
+        if(data.cod == 404){
+            error.classList.remove('visually-hidden')
+            error.innerHTML = data.message
+            setTimeout(()=>{
+                error.innerHTML = ''
+                error.classList.add('visually-hidden')
+            },5000)
+        }
+        else{
         let icon = data.weather[0].icon;
         let urlIcon = 'http://openweathermap.org/img/wn/'
         let endurl = '@2x.png'
@@ -65,6 +74,7 @@ btn.addEventListener('click',()=>{
         tempMinP.innerHTML = `Temperatura minima: ${tempMin} &deg;C`
         tempP.innerHTML = `Temperatura attuale: ${temp} &deg;C`
         weatherP.innerHTML = `Descrizione: ${data.weather[0].description}`
+        }
 })})
 
 document.querySelector('#weatherSearch').addEventListener('submit',()=>{
@@ -75,6 +85,15 @@ document.querySelector('#weatherSearch').addEventListener('submit',()=>{
     fetch(completeWeatherUrl)
     .then(response => response.json())
     .then(data => {
+        if(data.cod == 404){
+            error.classList.remove('visually-hidden')
+            error.innerHTML = data.message
+            setTimeout(()=>{
+                error.innerHTML = ''
+                error.classList.add('visually-hidden')
+            },5000)
+        }
+        else {
         let icon = data.weather[0].icon;
         let urlIcon = 'http://openweathermap.org/img/wn/'
         let endurl = '@2x.png'
@@ -88,6 +107,7 @@ document.querySelector('#weatherSearch').addEventListener('submit',()=>{
         tempMinP.innerHTML = `Temperatura minima: ${tempMin} &deg;C`
         tempP.innerHTML = `Temperatura attuale: ${temp} &deg;C`
         weatherP.innerHTML = `Descrizione: ${data.weather[0].description}`
+        }
 })})
  
 function KelvinToCelsius(temp){
